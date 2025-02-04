@@ -26,13 +26,17 @@ ascii_art = [
 ---.__(___)
 '''  # Scissors
 ]
+
 rock_paper_scissors = ["Rock", "Paper", "Scissors"]
+
 winning_pairs = [["Rock", "Scissors"], #Rock beats Scissors
                  ["Paper", "Rock"], #Paper beats Rock
                  ["Scissors", "Paper"]] # Scissors beats Paper
 
+
 user_choice = (int(input(f"What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: \n")))
 computer_choice = random.randint(0, 2)
+
 
 # Print choices
 print(f"\nYou chose: {rock_paper_scissors[user_choice]}")
@@ -40,6 +44,8 @@ print(ascii_art[user_choice])
 
 print(f"\nComputer chose: {rock_paper_scissors[computer_choice]}")
 print(ascii_art[computer_choice])
+
+
 
 if [rock_paper_scissors[user_choice], rock_paper_scissors[computer_choice]] in winning_pairs:
     print("You win!")
