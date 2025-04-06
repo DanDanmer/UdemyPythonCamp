@@ -1,0 +1,26 @@
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+
+student_grades = {}
+
+for key in student_scores:
+    score = student_scores[key]
+    
+    if 91 <= score <= 100:
+        student_grades[key] = "Outstanding"
+        print("Your score is.. Outstanding!")
+    elif 81 <= score <= 90:
+        student_grades[key] = "Exceeds Expectations"
+        print("Your score exceeds expectations")
+    elif 71 <= score <= 80:
+        student_grades[key] = "Acceptable"
+        print("Your score is acceptable")
+    else:
+        student_grades[key] = "Fail"
+        print("Fail")
