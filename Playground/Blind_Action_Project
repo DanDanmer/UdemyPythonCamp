@@ -1,0 +1,23 @@
+from art import logo
+print(logo)
+
+bids = {}
+bidding_active = True
+while bidding_active:
+    name = str(input("What is your name?: "))
+    price = int(input("What is your bid?: $"))
+    bids[name.title()] = price
+
+    new_bidders = (input("Are there any other bidders? Type 'yes' or 'no'\n").lower())
+    if new_bidders == 'yes':
+        print("\n" * 100)
+    elif new_bidders == 'no':
+        bidding_active = False
+
+winner = ""
+highest_bid = 0
+for player in bids:
+    if bids[player] > highest_bid:
+        winner = player
+        highest_bid = bids[player]
+print(f'And the winner of the highest bid is {winner} with ${highest_bid}')
